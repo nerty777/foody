@@ -1,0 +1,41 @@
+.form:hover {
+  cursor: pointer;
+}
+
+.custom_select {
+  position: relative;
+  display: block;
+  min-width: 220px;
+  border: 2px solid #9dcb8f;
+}
+
+.custom_select select {
+  border: none;
+  background: transparent;
+  appearance: none;
+  border-radius: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+  padding: 10px 55px 10px 15px;
+  font-size: 14px;
+}
+
+.custom_select:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  line-height: 30px;
+  content: '∨';
+  text-align: center;
+  color: #9dcb8f;
+  font-size: 20px;
+  border-left: 2px solid #9dcb8f;
+  z-index: -1;
+}
+
+.custom_select select:hover {
+  cursor: pointer;
+}

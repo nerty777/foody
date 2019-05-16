@@ -1,0 +1,16 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.container:hover {
+  cursor: pointer;
+ }
+
+.name {
+  font-size: 24px;
+  user-select: none;
+  margin-left: 10px;
+}

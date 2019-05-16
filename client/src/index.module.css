@@ -1,0 +1,54 @@
+:global(html) {
+  box-sizing: border-box;
+}
+
+:global(*, *::before, *::after) {
+  box-sizing: inherit;
+}
+
+:global(body) {
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fafafa;
+  background-color: #f1f3f7;
+  max-width: 1920px;
+}
+
+:global(button) {
+  cursor: pointer;
+  padding: 8px 20px;
+  font-size: 14px;
+  margin: 5px;
+  border: 2px solid #9dcb8f;
+  background-color: #9dcb8f;
+  border-radius: 20px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+:global(button:hover) {
+  transition: 0.3s;
+  background-color: #fff;
+  color: #9dcb8f;
+}
+
+:global(button, input) {
+  font-family: inherit;
+}
+
+:global(img) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+:global(a) {
+  text-decoration: none;
+  color: #000;
+}
+
+:global(a:visited) {
+  color: #000;
+  text-decoration: none;
+ }

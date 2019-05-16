@@ -1,0 +1,40 @@
+.dropdown {
+  position: absolute;
+  top: 55px;
+  right: 0px;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid green;
+  background-color: #fff;
+  text-align: left;
+  z-index: 1;
+}
+
+.button {
+  display: block;
+}
+
+.button:hover {
+  background-color: #9dcb8f;
+  cursor: pointer;
+}
+
+.link {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #212121;
+}
+
+.link_hover {
+  color: #639055;
+}
+
+.list {
+  list-style: none;
+  padding: 5px;
+  text-align: left;
+}
+
+.item {
+  margin-bottom: 10px;
+}

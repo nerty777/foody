@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 650px;
+}
+
+.link {
+  display: block;
+  padding: 11px 15px;
+  max-width: 195px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #9dcb8f;
+}
+
+.link:visited {
+  color: #fff;
+}

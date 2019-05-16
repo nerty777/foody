@@ -1,0 +1,28 @@
+.container {
+  padding: 5px;
+}
+
+.id,
+.name,
+.price,
+.category,
+.description,
+.ingredients {
+  margin: 10px;
+}
+
+.description, .ingredients {
+  text-align: left;
+}
+
+.img {
+  display: block;
+  margin: 0 auto;
+}
+
+.addToCart {
+  background-color: #FFC13B;
+  border-color: #FFC13B;
+}
+
+

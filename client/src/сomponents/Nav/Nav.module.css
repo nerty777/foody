@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.item {
+  margin-right: 20px;
+}
+
+.link {
+  padding: 4px 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #212121;
+}
+
+.link_hover {
+  color: #639055;
+}

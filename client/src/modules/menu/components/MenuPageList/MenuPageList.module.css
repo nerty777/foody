@@ -1,0 +1,29 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0px;
+  margin-left: -10px;
+}
+
+.item {
+  flex: 0 0 19.4%;
+  min-width: 250px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  border-radius: 7px;
+  text-align: center;
+  padding: 30px;
+  margin: 10px;
+}
+
+.item:nth-child(4n+4) {
+  margin-right: 0px;
+}
+
+@media screen and (min-width: 1920px) {
+  .item {
+    flex: 0 0 20.8%;
+  }
+}
+

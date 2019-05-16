@@ -1,0 +1,29 @@
+.red {
+  color: red;
+  font-size: 40px;
+}
+
+.container {
+  padding: 15px;
+  margin: 15px;
+  width: 40%;
+  background-color: rgb(228, 240, 235);
+}
+
+.button,
+.img,
+.id,
+.name,
+.image,
+.price,
+.category,
+.description,
+.ingredients {
+  margin: 20px;
+}
+
+.addToCart {
+  background-color: #FFC13B;
+  border-color: #FFC13B;
+  margin: 10px 20px;
+}

@@ -1,0 +1,12 @@
+.modal {
+  max-width: 800px;
+  min-width: 700px;
+  min-height: 300px;
+  background-color: #fff;
+  padding: 16px;
+}
+
+.addToCart {
+  background-color: #FFC13B;
+  border-color: #FFC13B;
+}

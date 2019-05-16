@@ -1,0 +1,39 @@
+.red {
+  color: red;
+  font-size: 40px;
+}
+
+.loading {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  font-size: 70px;
+  color: blue;
+  background-color: #fff;
+  padding: 5px;
+}
+
+.input {
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #9dcb8f;
+  min-width: 240px;
+}
+
+.input, .label, .option {
+  display: block;
+  margin: 5px 0px 15px 0px;
+}
+
+.select {
+  display: block;
+  width: 264px;
+  height: 41px;
+  margin-top: 5px;
+  border: 2px solid #9dcb8f;
+}
+
+.select:hover {
+  cursor: pointer;
+}

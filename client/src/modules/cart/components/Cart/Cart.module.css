@@ -1,0 +1,64 @@
+.button {
+  padding: 1px;
+  border-radius: 50%;
+  line-height: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #FFC13B;
+  border: none;
+  font-size: 20px;
+}
+
+.table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.table th,
+.table td {
+  padding: 10px 16px;
+}
+
+.table tr {
+  border-bottom: 1px solid #212121;
+}
+
+.empty {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.total {
+  color: #B55366;
+}
+
+.price {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.total_price {
+  text-align: center;
+  font-size: 20px;
+}
+
+.disabled {
+  padding: 1px;
+  border-radius: 50%;
+  line-height: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #FFC13B;
+  border: none;
+  font-size: 20px;
+  opacity: 0.4;
+}
+
+.disabled:hover, .disabled:focus {
+  background-color: #FFC13B;
+  color: #fff;
+  outline: none;
+  border: none;
+}
