@@ -1,7 +1,7 @@
 import React, { Component, lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
-import v4 from 'uuid/v4';
+import { v4 } from 'uuid';
 import AppHeader from '../AppHeader/AppHeader';
 import { refreshCurrentUser } from '../../modules/auth/authOperations';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
