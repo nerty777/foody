@@ -17,7 +17,7 @@ const router = Router();
 
 const requireAuth = expressJwt({
   secret: process.env.JWT_SECRET,
-  userProperty: 'user'
+  algorithms: ['RS256']
 });
 
 router.post('/signup', (req, res) => {
