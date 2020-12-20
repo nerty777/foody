@@ -13,4 +13,4 @@ export default Object.freeze({
   DELIVERY: '/delivery',
   SIGN_IN: '/signin',
   SIGN_UP: '/signup',
-});
+})

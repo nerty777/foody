@@ -1,5 +1,5 @@
-import React from 'react';
-import s from './SignUpForm.module.css';
+import React from 'react'
+import s from './SignUpForm.module.css'
 
 const SignUpForm = ({ item, handleChange, handleSubmit }) => {
   return (
@@ -44,7 +44,7 @@ const SignUpForm = ({ item, handleChange, handleSubmit }) => {
         Sign Up
       </button>
     </form>
-  );
-};
+  )
+}
 
-export default SignUpForm;
+export default SignUpForm

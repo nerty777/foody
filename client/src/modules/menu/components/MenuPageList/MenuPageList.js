@@ -1,6 +1,6 @@
-import React from 'react';
-import MenuCard from '../MenuCard/MenuCard';
-import s from './MenuPageList.module.css';
+import React from 'react'
+import MenuCard from '../MenuCard/MenuCard'
+import s from './MenuPageList.module.css'
 
 const MenuPageList = ({
   filteredMenu,
@@ -20,7 +20,7 @@ const MenuPageList = ({
           description,
           ingredients,
           category,
-        } = item;
+        } = item
         return (
           <li className={s.item} key={id}>
             <MenuCard
@@ -37,9 +37,9 @@ const MenuPageList = ({
               addToCart={() => addToCart(id)}
             />
           </li>
-        );
+        )
       })}
     </ul>
-  );
+  )
 
-export default MenuPageList;
+export default MenuPageList

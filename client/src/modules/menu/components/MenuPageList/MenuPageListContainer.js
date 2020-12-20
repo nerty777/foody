@@ -1,19 +1,20 @@
-import React, { Component } from 'react';
-import { withRouter, NavLink } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
-import queryString from 'query-string';
-import { menuOperations, menuSelectors } from '../..';
-import cartActions from '../../../cart/components/Cart/cartActions';
-import PageList from './MenuPageList';
-import ModalMenuPage from '../../../../сomponents/Modal/ModalMenuPage/index';
-import MenuCategorySelector from '../MenuCategorySelector/MenuCategorySelector';
-import MenuFilter from '../MenuFilter/MenuFilter';
-import routes from '../../../../configs/routes';
-import s from './MenuPageListContainer.module.css';
+import React, { Component } from 'react'
+import { withRouter, NavLink } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { compose } from 'redux'
+import queryString from 'query-string'
+import { menuSelectors } from '../../menuSelectors'
+import { menuOperations } from '../../menuOperations'
+import { cartActions } from '../../../cart/components/Cart/cartActions'
+import PageList from './MenuPageList'
+import ModalMenuPage from '../../../../сomponents/Modal/ModalMenuPage/index'
+import MenuCategorySelector from '../MenuCategorySelector/MenuCategorySelector'
+import MenuFilter from '../MenuFilter/MenuFilter'
+import routes from '../../../../configs/routes'
+import s from './MenuPageListContainer.module.css'
 
 const getCategoryFromProps = props =>
-  queryString.parse(props.location.search).category;
+  queryString.parse(props.location.search).category
 
 class PageListContainer extends Component {
   componentDidMount() {
@@ -21,34 +22,34 @@ class PageListContainer extends Component {
       fetchMenuItems,
       fetchAllCategories,
       fetchMenuByCategory,
-    } = this.props;
-    fetchMenuItems();
-    fetchAllCategories();
-    const category = getCategoryFromProps(this.props);
+    } = this.props
+    fetchMenuItems()
+    fetchAllCategories()
+    const category = getCategoryFromProps(this.props)
 
     if (!category) {
-      const { history, location } = this.props;
+      const { history, location } = this.props
       return history.replace({
         pathname: location.pathname,
         search: 'category=all',
-      });
+      })
     }
-    return fetchMenuByCategory(category);
+    return fetchMenuByCategory(category)
   }
 
   handleCategoryChange = category => {
-    const { history, location, fetchMenuByCategory } = this.props;
+    const { history, location, fetchMenuByCategory } = this.props
     history.push({
       pathname: location.pathname,
       search: `category=${category}`,
-    });
-    return fetchMenuByCategory(category);
-  };
+    })
+    return fetchMenuByCategory(category)
+  }
 
   handleFilterChange = e => {
-    const { handleFilterChange } = this.props;
-    handleFilterChange(e.target.value);
-  };
+    const { handleFilterChange } = this.props
+    handleFilterChange(e.target.value)
+  }
 
   render() {
     const {
@@ -60,9 +61,9 @@ class PageListContainer extends Component {
       categories,
       filteredMenu,
       addToCart,
-    } = this.props;
+    } = this.props
 
-    const currentCategory = getCategoryFromProps(this.props);
+    const currentCategory = getCategoryFromProps(this.props)
 
     return (
       <section className={s.menupage}>
@@ -94,7 +95,7 @@ class PageListContainer extends Component {
           <ModalMenuPage menuOneItemForModal={menuOneItemForModal} />
         )}
       </section>
-    );
+    )
   }
 }
 
@@ -104,8 +105,8 @@ const mapStateToProps = state => {
     modalStatus: menuSelectors.modalStatus(state),
     categories: menuSelectors.getAllCategories(state),
     filteredMenu: menuSelectors.getFilteredMenuItems(state),
-  };
-};
+  }
+}
 
 const mapDispatchToProps = {
   fetchMenuItems: menuOperations.fetchMenuItems,
@@ -115,12 +116,9 @@ const mapDispatchToProps = {
   fetchMenuByCategory: menuOperations.fetchMenuByCategory,
   handleFilterChange: menuOperations.handleFilterChange,
   addToCart: cartActions.addToCart,
-};
+}
 
 export default compose(
   withRouter,
-  connect(
-    mapStateToProps,
-    mapDispatchToProps,
-  ),
-)(PageListContainer);
+  connect(mapStateToProps, mapDispatchToProps),
+)(PageListContainer)

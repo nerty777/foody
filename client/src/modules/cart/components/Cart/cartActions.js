@@ -1,31 +1,36 @@
-import types from './cartActionTypes';
+import { actionTypes } from './cartActionTypes'
 
 export const addToCart = id => ({
-  type: types.ADD_TO_CART,
+  type: actionTypes.ADD_TO_CART,
   payload: {
     id,
   },
-});
+})
 
 export const removeFromCart = id => ({
-  type: types.REMOVE_FROM_CART,
+  type: actionTypes.REMOVE_FROM_CART,
   payload: {
     id,
   },
-});
+})
 
 export const increaseAmount = id => ({
-  type: types.INCREASE_AMOUNT,
+  type: actionTypes.INCREASE_AMOUNT,
   payload: {
     id,
   },
-});
+})
 
 export const decreaseAmount = id => ({
-  type: types.DECREASE_AMOUNT,
+  type: actionTypes.DECREASE_AMOUNT,
   payload: {
     id,
   },
-});
+})
 
-export default { addToCart, removeFromCart, increaseAmount, decreaseAmount };
+export const cartActions = {
+  addToCart,
+  removeFromCart,
+  increaseAmount,
+  decreaseAmount,
+}

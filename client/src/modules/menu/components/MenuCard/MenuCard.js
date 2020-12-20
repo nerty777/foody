@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import s from './MenuCard.module.css';
+import React from 'react'
+import { Link, withRouter } from 'react-router-dom'
+import s from './MenuCard.module.css'
 
 const MenuCard = ({
   id,
@@ -24,10 +24,10 @@ const MenuCard = ({
       }}
     >
       <img className={s.img} src={image} alt={name} width="200" height="auto" />
-    
-    <div className={s.name}>{name}</div>
-    <div className={s.price}>{price}$</div>
-    <div className={s.category}>Категория: {category}</div>
+
+      <div className={s.name}>{name}</div>
+      <div className={s.price}>{price}$</div>
+      <div className={s.category}>Категория: {category}</div>
     </Link>
     <div className="actions">
       <button type="button" onClick={onShowMoreInfo}>
@@ -41,6 +41,6 @@ const MenuCard = ({
       </button>
     </div>
   </div>
-);
+)
 
-export default withRouter(MenuCard);
+export default withRouter(MenuCard)

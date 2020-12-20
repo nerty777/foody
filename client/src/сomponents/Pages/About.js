@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const AboutPage = () => (
   <section className="about-page">
@@ -17,6 +17,6 @@ const AboutPage = () => (
       explicabo mollitia nulla alias, a iste eos blanditiis quos dolorum!
     </div>
   </section>
-);
+)
 
-export default AboutPage;
+export default AboutPage

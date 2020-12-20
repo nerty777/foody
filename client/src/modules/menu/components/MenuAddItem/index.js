@@ -1,1 +1,1 @@
-export { default } from './MenuAddItemContainer';
+export { default } from './MenuAddItemContainer'

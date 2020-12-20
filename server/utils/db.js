@@ -1,22 +1,22 @@
-const shortid = require('shortid');
+const shortid = require('shortid')
 
-const userDb = [];
+const userDb = []
 
-const isUnique = email => !userDb.find(user => user.email === email);
+const isUnique = email => !userDb.find(user => user.email === email)
 
 const find = (email, password) => {
   const user = userDb.find(
     user => user.email === email && user.password === password
-  );
+  )
 
-  console.log('user: ', user);
+  console.log('user: ', user)
 
-  return user ? Promise.resolve(user) : Promise.reject('User not found');
-};
+  return user ? Promise.resolve(user) : Promise.reject('User not found')
+}
 
 const add = ({ name, email, password }) => {
   if (!isUnique(email)) {
-    return Promise.reject('User with this email already exists');
+    return Promise.reject('User with this email already exists')
   }
 
   const user = {
@@ -24,21 +24,21 @@ const add = ({ name, email, password }) => {
     name,
     email,
     password,
-  };
+  }
 
-  userDb.push(user);
+  userDb.push(user)
 
-  return Promise.resolve(user);
-};
+  return Promise.resolve(user)
+}
 
 const getById = id => {
-  const user = userDb.find(user => user.id === id);
+  const user = userDb.find(user => user.id === id)
 
-  return user ? Promise.resolve(user) : Promise.reject('User not found');
-};
+  return user ? Promise.resolve(user) : Promise.reject('User not found')
+}
 
 module.exports = {
   add,
   find,
   getById
-};
+}

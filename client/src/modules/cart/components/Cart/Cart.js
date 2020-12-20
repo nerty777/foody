@@ -1,5 +1,5 @@
-import React from 'react';
-import s from './Cart.module.css';
+import React from 'react'
+import s from './Cart.module.css'
 
 const Cart = ({
   menu = [],
@@ -51,6 +51,6 @@ const Cart = ({
     </>
   ) : (
     <div className={s.empty}>В корзине нет товаров!</div>
-  );
+  )
 
-export default Cart;
+export default Cart

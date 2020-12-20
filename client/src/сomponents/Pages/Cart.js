@@ -1,10 +1,10 @@
-import React from 'react';
-import Cart from '../../modules/cart/components/Cart/CartContainer';
+import React from 'react'
+import Cart from '../../modules/cart/components/Cart/CartContainer'
 
 const CartPage = () => (
   <section className="about-page">
     <Cart />
   </section>
-);
+)
 
-export default CartPage;
+export default CartPage

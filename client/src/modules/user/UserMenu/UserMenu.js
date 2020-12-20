@@ -1,37 +1,37 @@
-import React, { Component, createRef } from 'react';
-import DropDown from '../DropDown/DropDown';
-import Avatar from '../Avatar/Avatar';
-import routes from '../../../configs/routes';
-import userAvatar from './userAvatar.jpg';
-import s from './UserMenu.module.css';
+import React, { Component, createRef } from 'react'
+import DropDown from '../DropDown/DropDown'
+import Avatar from '../Avatar/Avatar'
+import routes from '../../../configs/routes'
+import userAvatar from './userAvatar.jpg'
+import s from './UserMenu.module.css'
 
 export default class UserMenu extends Component {
-  backdropRef = createRef();
+  backdropRef = createRef()
 
   state = {
     isDropDownOpen: false,
-  };
+  }
 
   componentDidMount() {
-    window.addEventListener('click', this.handleWindowClick);
-    window.addEventListener('keydown', this.handleEscClick);
+    window.addEventListener('click', this.handleWindowClick)
+    window.addEventListener('keydown', this.handleEscClick)
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    const { isDropDownOpen } = this.state;
-    return nextState.isDropDownOpen !== isDropDownOpen;
+    const { isDropDownOpen } = this.state
+    return nextState.isDropDownOpen !== isDropDownOpen
   }
 
   componentWillUnmount() {
-    window.removeEventListener('click', this.handleWindowClick);
-    window.removeEventListener('keydown', this.handleEscClick);
+    window.removeEventListener('click', this.handleWindowClick)
+    window.removeEventListener('keydown', this.handleEscClick)
   }
 
   handleWindowClick = e => {
-    const isTargetInsideContainer = this.backdropRef.current.contains(e.target);
-    const { isDropDownOpen } = this.state;
+    const isTargetInsideContainer = this.backdropRef.current.contains(e.target)
+    const { isDropDownOpen } = this.state
     if (isDropDownOpen && !isTargetInsideContainer) {
-      this.closeDropDown();
+      this.closeDropDown()
     }
     if (
       (e.target.pathname === routes.ACCOUNT ||
@@ -40,32 +40,32 @@ export default class UserMenu extends Component {
       isTargetInsideContainer &&
       isDropDownOpen
     ) {
-      this.closeDropDown();
+      this.closeDropDown()
     }
-  };
+  }
 
   handleEscClick = e => {
     if (e.code !== 'Escape') {
-      return;
+      return
     }
-    this.closeDropDown();
-  };
+    this.closeDropDown()
+  }
 
   openDropDown = () => {
     this.setState({
       isDropDownOpen: true,
-    });
-  };
+    })
+  }
 
   closeDropDown = () => {
     this.setState({
       isDropDownOpen: false,
-    });
-  };
+    })
+  }
 
   render() {
-    const { isDropDownOpen } = this.state;
-    const { user, onSignOut } = this.props;
+    const { isDropDownOpen } = this.state
+    const { user, onSignOut } = this.props
     return (
       <div
         className={s.container}
@@ -76,6 +76,6 @@ export default class UserMenu extends Component {
         <span className={s.name}>{user.name}</span>
         {isDropDownOpen && <DropDown onSignOut={onSignOut} />}
       </div>
-    );
+    )
   }
 }

@@ -1,6 +1,6 @@
-import routes from './routes';
+import routes from './routes'
 
-export default [
+export const appNavItems = [
   {
     name: 'Menu',
     path: routes.MENU,
@@ -17,4 +17,4 @@ export default [
     name: 'Delivery',
     path: routes.DELIVERY,
   },
-];
+]

@@ -1,5 +1,5 @@
-import React from 'react';
-import s from './MenuCategorySelector.module.css';
+import React from 'react'
+import s from './MenuCategorySelector.module.css'
 
 const CategorySelector = ({ options, value, onChange }) => (
   <form className={s.form}>
@@ -18,6 +18,6 @@ const CategorySelector = ({ options, value, onChange }) => (
       </select>
     </label>
   </form>
-);
+)
 
-export default CategorySelector;
+export default CategorySelector

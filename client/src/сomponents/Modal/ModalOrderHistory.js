@@ -1,4 +1,4 @@
-import React, { Component, createRef } from 'react';
+import React, { Component, createRef } from 'react'
 
 const styles = {
   backdrop: {
@@ -19,39 +19,39 @@ const styles = {
     backgroundColor: '#fff',
     padding: 16,
   },
-};
+}
 
 export default class Modal extends Component {
-  backdropRef = createRef();
+  backdropRef = createRef()
 
   componentDidMount() {
-    window.addEventListener('click', this.handleWindowClick);
-    window.addEventListener('keydown', this.handleEscClick);
+    window.addEventListener('click', this.handleWindowClick)
+    window.addEventListener('keydown', this.handleEscClick)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('click', this.handleWindowClick);
-    window.removeEventListener('keydown', this.handleEscClick);
+    window.removeEventListener('click', this.handleWindowClick)
+    window.removeEventListener('keydown', this.handleEscClick)
   }
 
   handleWindowClick = e => {
-    const { onClose } = this.props;
+    const { onClose } = this.props
     if (this.backdropRef.current !== e.target) {
-      return;
+      return
     }
-    onClose();
-  };
+    onClose()
+  }
 
   handleEscClick = e => {
-    const { onClose } = this.props;
+    const { onClose } = this.props
     if (e.code !== 'Escape') {
-      return;
+      return
     }
-    onClose();
-  };
+    onClose()
+  }
 
   render() {
-    const { onClose, text } = this.props;
+    const { onClose, text } = this.props
 
     return (
       <div className="backdrop" style={styles.backdrop} ref={this.backdropRef}>
@@ -66,6 +66,6 @@ export default class Modal extends Component {
           </button>
         </div>
       </div>
-    );
+    )
   }
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import userAvatar from '../../modules/user/UserMenu/userAvatar.jpg';
+import React from 'react'
+import { connect } from 'react-redux'
+import userAvatar from '../../modules/user/UserMenu/userAvatar.jpg'
 
 const Account = ({ user }) =>
   user && (
@@ -14,10 +14,10 @@ const Account = ({ user }) =>
         </div>
       </div>
     </section>
-  );
+  )
 
 const mapStateToProps = state => ({
   user: state.session.user,
-});
+})
 
-export default connect(mapStateToProps)(Account);
+export default connect(mapStateToProps)(Account)

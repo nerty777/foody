@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import cartIconSvg from './cart.svg';
-import s from './CartIcon.module.css';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import cartIconSvg from './cart.svg'
+import s from './CartIcon.module.css'
 
 const CartIcon = ({ amount = 7 }) => (
   <div className={s.container}>
@@ -10,6 +10,6 @@ const CartIcon = ({ amount = 7 }) => (
       <span className={s.amount}>{amount}</span>
     </Link>
   </div>
-);
+)
 
-export default CartIcon;
+export default CartIcon

@@ -1,1 +1,1 @@
-export { default } from './MenuPageListContainer';
+export { default } from './MenuPageListContainer'

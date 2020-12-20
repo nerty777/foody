@@ -1,5 +1,5 @@
-import React from 'react';
-import s from './MenuOneCardPage.module.css';
+import React from 'react'
+import s from './MenuOneCardPage.module.css'
 
 const MenuCardPage = ({ menuOneItem, handleGoBack, addToCart }) => (
   <div className={s.container}>
@@ -14,7 +14,6 @@ const MenuCardPage = ({ menuOneItem, handleGoBack, addToCart }) => (
         width="350"
         height="auto"
       />
-      {/* <div className={s.id}>ID: {menuOneItem.id}</div> */}
       <div className={s.name}>Название: {menuOneItem.name}</div>
       <div className={s.price}>Цена: {menuOneItem.price}$</div>
       <div className={s.category}>Категория: {menuOneItem.category}</div>
@@ -24,11 +23,15 @@ const MenuCardPage = ({ menuOneItem, handleGoBack, addToCart }) => (
           Состав: {menuOneItem.ingredients.map(ingredient => `${ingredient}. `)}
         </div>
       )}
-            <button className={s.addToCart} type="button" onClick={() => addToCart(menuOneItem.id)}>
+      <button
+        className={s.addToCart}
+        type="button"
+        onClick={() => addToCart(menuOneItem.id)}
+      >
         Add to cart
       </button>
     </div>
   </div>
-);
+)
 
-export default MenuCardPage;
+export default MenuCardPage

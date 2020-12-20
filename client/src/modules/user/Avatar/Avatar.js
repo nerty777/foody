@@ -1,5 +1,5 @@
-import React from 'react';
-import s from './Avatar.module.css';
+import React from 'react'
+import s from './Avatar.module.css'
 
 const Avatar = ({ userAvatar }) => (
   <img
@@ -8,6 +8,6 @@ const Avatar = ({ userAvatar }) => (
     alt="user avatar"
     title="User profile"
   />
-);
+)
 
-export default Avatar;
+export default Avatar

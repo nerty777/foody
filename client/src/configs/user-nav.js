@@ -1,6 +1,6 @@
-import routes from './routes';
+import routes from './routes'
 
-export default [
+export const userNav = [
   {
     name: 'Account',
     path: routes.ACCOUNT,
@@ -13,4 +13,4 @@ export default [
     name: 'Meal Planner',
     path: routes.PLANNER,
   },
-];
+]

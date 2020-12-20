@@ -1,5 +1,5 @@
-import React from 'react';
-import s from './ModalMenuPage.module.css';
+import React from 'react'
+import s from './ModalMenuPage.module.css'
 
 const ModalMenuPage = ({ menuOneItemForModal, onClose, addToCart }) => (
   <div className={s.modal}>
@@ -29,6 +29,6 @@ const ModalMenuPage = ({ menuOneItemForModal, onClose, addToCart }) => (
       Close
     </button>
   </div>
-);
+)
 
-export default ModalMenuPage;
+export default ModalMenuPage

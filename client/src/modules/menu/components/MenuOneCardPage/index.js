@@ -1,1 +1,1 @@
-export { default } from './MenuOneCardPageContainer';
+export { default } from './MenuOneCardPageContainer'

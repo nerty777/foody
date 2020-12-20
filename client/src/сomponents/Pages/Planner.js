@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Planner = () => (
   <section className="planner">
@@ -11,6 +11,6 @@ const Planner = () => (
       illum.
     </div>
   </section>
-);
+)
 
-export default Planner;
+export default Planner

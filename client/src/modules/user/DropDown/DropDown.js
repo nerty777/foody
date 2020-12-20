@@ -1,7 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import userNav from '../../../configs/user-nav';
-import s from './DropDown.module.css';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { userNav } from '../../../configs/user-nav'
+import s from './DropDown.module.css'
 
 const DropDown = ({ onSignOut }) => (
   <div className={s.dropdown}>
@@ -22,6 +22,6 @@ const DropDown = ({ onSignOut }) => (
       Logout
     </button>
   </div>
-);
+)
 
-export default DropDown;
+export default DropDown

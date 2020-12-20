@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'
 import {
   signUpRequest,
   signUpSuccess,
@@ -10,59 +10,59 @@ import {
   signOutSuccess,
   refreshUserStart,
   refreshUserSuccess,
-} from './authAction';
-import * as selectors from './authSelectors';
+} from './authAction'
+import * as selectors from './authSelectors'
 
 const setAuthHeader = token => {
-  axios.defaults.headers.common.Authorization = `Bearer ${token}`;
-};
+  axios.defaults.headers.common.Authorization = `Bearer ${token}`
+}
 
 const clearAuthHeader = () => {
-  axios.defaults.headers.common.Authorization = null;
-};
+  axios.defaults.headers.common.Authorization = null
+}
 
 export const signUp = credentials => dispatch => {
-  dispatch(signUpRequest());
+  dispatch(signUpRequest())
 
   axios
     .post('http://localhost:4040/auth/signup', credentials)
     .then(({ data }) => {
-      setAuthHeader(data.token);
-      dispatch(signUpSuccess(data));
+      setAuthHeader(data.token)
+      dispatch(signUpSuccess(data))
     })
-    .catch(error => dispatch(signUpError(error)));
-};
+    .catch(error => dispatch(signUpError(error)))
+}
 
 export const signIn = credentials => dispatch => {
-  dispatch(signInRequest());
+  dispatch(signInRequest())
   axios
     .post('http://localhost:4040/auth/signin', credentials)
     .then(({ data }) => {
-      setAuthHeader(data.token);
-      dispatch(signInSuccess(data));
+      setAuthHeader(data.token)
+      dispatch(signInSuccess(data))
     })
-    .catch(error => dispatch(signInError(error)));
-};
+    .catch(error => dispatch(signInError(error)))
+}
 
 export const signOut = () => dispatch => {
-  dispatch(signOutRequest());
+  dispatch(signOutRequest())
   axios.post('http://localhost:4040/auth/signout').then(() => {
-    clearAuthHeader();
-    dispatch(signOutSuccess());
-  });
-};
+    clearAuthHeader()
+    dispatch(signOutSuccess())
+  })
+}
 
 export const refreshCurrentUser = () => (dispatch, getState) => {
-  const token = selectors.getToken(getState());
-  if (!token) return;
-  setAuthHeader(token);
-  dispatch(refreshUserStart());
+  const token = selectors.getToken(getState())
+  if (!token) return
+  setAuthHeader(token)
+  dispatch(refreshUserStart())
 
   axios
     .get('http://localhost:4040/auth/current')
     .then(({ data }) => dispatch(refreshUserSuccess(data.user)))
     .catch(error => {
-      clearAuthHeader();
-      console.log('Error while refreshing: ', error);
-    });
-};
+      clearAuthHeader()
+      console.log('Error while refreshing: ', error)
+    })
+}

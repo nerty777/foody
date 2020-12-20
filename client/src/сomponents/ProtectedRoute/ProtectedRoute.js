@@ -1,7 +1,7 @@
-import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
-import * as selectors from '../../modules/auth/authSelectors';
+import React from 'react'
+import { Route, Redirect } from 'react-router-dom'
+import { connect } from 'react-redux'
+import * as selectors from '../../modules/auth/authSelectors'
 
 const ProtectedRoute = ({
   component: Component,
@@ -24,10 +24,10 @@ const ProtectedRoute = ({
       )
     }
   />
-);
+)
 
 const mapStateToProps = state => ({
   isAuthenticated: selectors.isAuthenticated(state),
-});
+})
 
-export default connect(mapStateToProps)(ProtectedRoute);
+export default connect(mapStateToProps)(ProtectedRoute)

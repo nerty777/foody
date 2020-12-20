@@ -1,6 +1,6 @@
-import React from 'react';
-import OrderHistoryContainer from '../../modules/order-history/OrderHistoryContainer';
+import React from 'react'
+import OrderHistoryContainer from '../../modules/order-history/OrderHistoryContainer'
 
-const OrderHistory = () => <OrderHistoryContainer />;
+const OrderHistory = () => <OrderHistoryContainer />
 
-export default OrderHistory;
+export default OrderHistory

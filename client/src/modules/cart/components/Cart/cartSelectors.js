@@ -1,14 +1,14 @@
-import { createSelector } from 'reselect';
+import { createSelector } from 'reselect'
 
-const getCartMenuIds = state => state.cart.ids;
-const getCartMenuAmounts = state => state.cart.amount;
-const getMenuEntities = state => state.menu.entities.menuItems;
+const getCartMenuIds = state => state.cart.ids
+const getCartMenuAmounts = state => state.cart.amount
+const getMenuEntities = state => state.menu.entities.menuItems
 
 export const getCartMenuAmount = createSelector(
   getCartMenuAmounts,
   objAmounts =>
     Object.values(objAmounts).reduce((acc, value) => acc + value, 0),
-);
+)
 
 export const getCartMenu = createSelector(
   [getCartMenuIds, getCartMenuAmounts, getMenuEntities],
@@ -17,15 +17,14 @@ export const getCartMenu = createSelector(
       ...entities[id],
       amount: amounts[id],
     })),
-);
+)
 
-export const totalPrice = createSelector(
-  getCartMenu,
-  arr => arr.reduce((acc, value) => value.amount * value.price + acc, 0),
-);
+export const totalPrice = createSelector(getCartMenu, arr =>
+  arr.reduce((acc, value) => value.amount * value.price + acc, 0),
+)
 
-export default {
+export const cartSelector = {
   getCartMenuAmount,
   getCartMenu,
   totalPrice,
-};
+}

@@ -1,5 +1,5 @@
-import React from 'react';
-import s from './MenuAddItem.module.css';
+import React from 'react'
+import s from './MenuAddItem.module.css'
 
 const MenuAddItem = ({
   handleChange,
@@ -95,6 +95,6 @@ const MenuAddItem = ({
       Add menu card
     </button>
   </form>
-);
+)
 
-export default MenuAddItem;
+export default MenuAddItem

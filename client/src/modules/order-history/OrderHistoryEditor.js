@@ -1,34 +1,34 @@
-import React, { Component } from 'react';
-import s from './OrderHistory.module.css';
+import React, { Component } from 'react'
+import s from './OrderHistory.module.css'
 
 const INITIAL_STATE = {
   address: '',
   rating: '',
   price: '',
-};
+}
 
 export default class OrderHistoryEditor extends Component {
-  state = { address: '', rating: '', price: '' };
+  state = { address: '', rating: '', price: '' }
 
   handleChange = ({ target }) => {
-    const { name, value } = target;
-    this.setState({ [name]: value });
-  };
+    const { name, value } = target
+    this.setState({ [name]: value })
+  }
 
   handleSubmit = evt => {
-    evt.preventDefault();
-    const { address, rating, price } = this.state;
-    const { onSubmit } = this.props;
-    onSubmit(address, rating, price);
-    this.reset();
-  };
+    evt.preventDefault()
+    const { address, rating, price } = this.state
+    const { onSubmit } = this.props
+    onSubmit(address, rating, price)
+    this.reset()
+  }
 
   reset = () => {
-    this.setState({ ...INITIAL_STATE });
-  };
+    this.setState({ ...INITIAL_STATE })
+  }
 
   render() {
-    const { address, rating, price } = this.state;
+    const { address, rating, price } = this.state
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="address">
@@ -104,6 +104,6 @@ export default class OrderHistoryEditor extends Component {
         </label>
         <button type="submit">Add comment</button>
       </form>
-    );
+    )
   }
 }

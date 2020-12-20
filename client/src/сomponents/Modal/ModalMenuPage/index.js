@@ -1,1 +1,1 @@
-export { default } from './ModalMenuPageContainer';
+export { default } from './ModalMenuPageContainer'

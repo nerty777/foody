@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const OrderHistoryView = ({
   orderHistoryList,
@@ -14,7 +14,7 @@ const OrderHistoryView = ({
         <th>Rating</th>
       </tr>
       {orderHistoryList.map(item => {
-        const { id, date, price, address, rating } = item;
+        const { id, date, price, address, rating } = item
         return (
           <tr key={id}>
             <td>{date}</td>
@@ -32,10 +32,10 @@ const OrderHistoryView = ({
               </button>
             </td>
           </tr>
-        );
+        )
       })}
     </tbody>
   </table>
-);
+)
 
-export default OrderHistoryView;
+export default OrderHistoryView

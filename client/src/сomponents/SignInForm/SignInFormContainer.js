@@ -1,34 +1,34 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as operations from '../../modules/auth/authOperations';
-import SignInForm from './SignInForm';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import * as operations from '../../modules/auth/authOperations'
+import SignInForm from './SignInForm'
 
 const INITIAL_STATE = {
   email: '',
   password: '',
-};
+}
 
 class SignInFormContainer extends Component {
-  state = { ...INITIAL_STATE };
+  state = { ...INITIAL_STATE }
 
   handleChange = ({ target }) => {
-    const { name, value } = target;
-    this.setState({ [name]: value });
-  };
+    const { name, value } = target
+    this.setState({ [name]: value })
+  }
 
   handleSubmit = evt => {
-    const { onSubmit } = this.props;
-    evt.preventDefault();
-    onSubmit({ ...this.state });
-    this.reset();
-  };
+    const { onSubmit } = this.props
+    evt.preventDefault()
+    onSubmit({ ...this.state })
+    this.reset()
+  }
 
   reset = () => {
-    this.setState({ ...INITIAL_STATE });
-  };
+    this.setState({ ...INITIAL_STATE })
+  }
 
   render() {
-    const { email, password } = this.state;
+    const { email, password } = this.state
     return (
       <SignInForm
         email={email}
@@ -36,15 +36,12 @@ class SignInFormContainer extends Component {
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
       />
-    );
+    )
   }
 }
 
 const mapDispatchToProps = {
   onSubmit: operations.signIn,
-};
+}
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(SignInFormContainer);
+export default connect(null, mapDispatchToProps)(SignInFormContainer)

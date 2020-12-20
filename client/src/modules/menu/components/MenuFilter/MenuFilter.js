@@ -1,5 +1,5 @@
-import React from 'react';
-import s from './MenuFilter.module.css';
+import React from 'react'
+import s from './MenuFilter.module.css'
 
 const MenuFilter = ({ filter, handleFilterChange }) => (
   <form className={s.container}>
@@ -11,6 +11,6 @@ const MenuFilter = ({ filter, handleFilterChange }) => (
       onChange={handleFilterChange}
     />
   </form>
-);
+)
 
-export default MenuFilter;
+export default MenuFilter

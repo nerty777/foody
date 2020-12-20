@@ -1,6 +1,6 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import s from './Nav.module.css';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import s from './Nav.module.css'
 
 const AppNav = ({ appNavItems }) => (
   <nav className={s.container}>
@@ -19,6 +19,6 @@ const AppNav = ({ appNavItems }) => (
       ))}
     </ul>
   </nav>
-);
+)
 
-export default AppNav;
+export default AppNav
