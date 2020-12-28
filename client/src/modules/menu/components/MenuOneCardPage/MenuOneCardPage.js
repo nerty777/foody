@@ -1,4 +1,3 @@
-import React from 'react'
 import s from './MenuOneCardPage.module.css'
 
 const MenuCardPage = ({ menuOneItem, handleGoBack, addToCart }) => (

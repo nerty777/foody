@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { userNav } from '../../../configs/user-nav'
 import s from './DropDown.module.css'

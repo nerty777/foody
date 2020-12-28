@@ -1,4 +1,3 @@
-import React from 'react'
 import s from './MenuCategorySelector.module.css'
 
 const CategorySelector = ({ options, value, onChange }) => (

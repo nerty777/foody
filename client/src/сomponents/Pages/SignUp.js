@@ -1,4 +1,3 @@
-import React from 'react'
 import SignUpFormContainer from '../SignUpForm/SignUpFormContainer'
 import WithAuth from '../Hoc/withAuth'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import cartIconSvg from './cart.svg'
 import s from './CartIcon.module.css'

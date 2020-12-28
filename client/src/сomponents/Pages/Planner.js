@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Planner = () => (
   <section className="planner">
     Planner Page

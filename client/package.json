@@ -1,9 +1,9 @@
 {
-  "name": "my-app",
+  "name": "foody",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "normalizr": "^3.6.1",
     "query-string": "^6.13.7",
     "react": "^17.0.1",

@@ -1,4 +1,3 @@
-import React from 'react'
 import s from './MenuFilter.module.css'
 
 const MenuFilter = ({ filter, handleFilterChange }) => (

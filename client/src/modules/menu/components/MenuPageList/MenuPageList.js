@@ -1,4 +1,3 @@
-import React from 'react'
 import MenuCard from '../MenuCard/MenuCard'
 import s from './MenuPageList.module.css'
 

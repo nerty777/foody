@@ -1,4 +1,3 @@
-import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import * as selectors from '../../modules/auth/authSelectors'

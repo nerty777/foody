@@ -1,4 +1,3 @@
-import React from 'react'
 import MenuAddItem from '../../modules/menu/components/MenuAddItem'
 
 const MenuAddItemPage = () => (

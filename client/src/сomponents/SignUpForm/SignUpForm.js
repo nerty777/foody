@@ -1,4 +1,3 @@
-import React from 'react'
 import s from './SignUpForm.module.css'
 
 const SignUpForm = ({ item, handleChange, handleSubmit }) => {

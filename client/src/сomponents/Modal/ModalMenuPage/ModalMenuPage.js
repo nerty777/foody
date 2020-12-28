@@ -1,4 +1,3 @@
-import React from 'react'
 import s from './ModalMenuPage.module.css'
 
 const ModalMenuPage = ({ menuOneItemForModal, onClose, addToCart }) => (
