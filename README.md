@@ -1,10 +1,10 @@
 Available Scripts:<br>
 server - npm start;<br>
 client - npm run server and npm start;<br>
+
 <h3>Задание:</h3>
     <ul>
       <li>React, Redux.</li>
-      <li>Линтинг Airbnb.</li>
       <li>
         Сделать шапку приложения состоящую из логотипа, списка навигации и меню
         пользователя с выпадающим меню.
